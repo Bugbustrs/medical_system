@@ -5,10 +5,29 @@
 
 {% block content %}
 
-<div class='card'>
-{% comment %} <div> {{pati}} {% endcomment %}
+ 
+  <div class="container flex-column">
+  <div class = 'text-center display-5'>date of visit: {{ patientrecord.date }} </div>
+    <div class="card text-center mx-auto mb-2 mt-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Symptoms</h5>
+      <p class="card-text">{{patientrecord.symptoms}}</p>
+    </div>
+  </div>
 
-<a class='card-link' href="#">record for the date {{patientrecord.date}}</a>
+  <div class="card text-center mx-auto mb-2" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Diagnosis</h5>
+      <p class="card-text">{{patientrecord.diagnosis}}</p>
+    </div>
+  </div>
+
+  <div class="card text-center mx-auto mb-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Prescription</h5>
+      <p class="card-text">{{ patientrecord.prescription}}</p>
+    </div>
+  </div>
 </div>
 
 
