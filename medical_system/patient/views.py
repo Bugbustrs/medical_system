@@ -8,3 +8,6 @@ def index(request):
 
 class PatientRecordListView(generic.ListView):
     model = PatientRecord
+
+class PatientRecordDetailView(generic.DetailView):
+    model = PatientRecord

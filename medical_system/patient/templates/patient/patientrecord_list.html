@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{%block title%}
+<title>{{ patientrecord.date }}</title>{%endblock%}
+
+
+{% block content %}
+    {% for patientrecord in patientrecord_list %}
+
+<div class='card'>
+<a class='card-link' href="{{ patientrecord.get_absolute_url }}">record for the date {{patientrecord.date}}</a>
+</div>
+
+    {% endfor %}
+{%endblock%}

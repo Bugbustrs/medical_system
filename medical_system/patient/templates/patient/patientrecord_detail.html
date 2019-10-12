@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{%block title%}
+<title>{{ patientrecord.date }}</title>{%endblock%}
+
+
+{% block content %}
+
+<div class='card'>
+{% comment %} <div> {{pati}} {% endcomment %}
+
+<a class='card-link' href="#">record for the date {{patientrecord.date}}</a>
+</div>
+
+
+{%endblock%}
