@@ -1,0 +1,233 @@
+
+.job.inline {
+    font-family: 'Lato', sans-serif;
+    line-height:22px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      position: relative;
+      height: 6em;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 1px solid #f0f0f0;
+      color: #333;
+      padding: 1.5%;
+      font-size: 1.1em;
+      text-decoration: none;
+      cursor: pointer
+  }
+  
+  @media(max-device-width:640px),
+  (max-device-width:667px),
+  (max-width:480px),
+  (max-width:768px),
+  only screen and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:2) {
+      .job.inline {
+          font-size: .9em
+      }
+  }
+  
+  .job.inline:last-child {
+      border-bottom: none
+  }
+  
+  .job.inline:hover {
+      background-color: rgba(24, 201, 84, .15);
+      color: inherit
+  }
+  
+  .job.inline.featured {
+      background-color: rgba(255, 255, 149, .459)
+  }
+  
+  .job.inline.featured:hover {
+      background-color: #ff0
+  }
+  
+  .job.inline.expired {
+      filter: grayscale(100%);
+      opacity: .8
+  }
+  
+  .job.inline.expired.filled-job {
+      opacity: 1;
+      filter: grayscale(0)
+  }
+  
+  @media(max-device-width:640px),
+  (max-device-width:667px),
+  (max-width:480px),
+  (max-width:768px),
+  only screen and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:2) {
+      .job.inline {
+          margin: 0 -16px;
+          padding-left: .5em
+      }
+  }
+  
+  .job.inline>* {
+      display: inline-block;
+      vertical-align: middle;
+      border: none
+  }
+  
+  .job.inline .companyLogo-container {
+      display: inline-block;
+      width: 4em;
+      margin-right: .8em
+  }
+  
+  .job.inline .companyLogo {
+      max-height: 4em;
+      max-width: 4em;
+      border-radius: 3px
+  }
+  
+  .job.inline .meta {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      flex-grow: 2
+  }
+  
+  .job.inline .meta .companyName {
+      display: inline-block;
+      margin-right: 1ch;
+      font-weight: bolder;
+      text-decoration: none;
+      color: #000
+  }
+  
+  @media(max-device-width:640px),
+  (max-device-width:667px),
+  (max-width:480px),
+  (max-width:768px),
+  only screen and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:2) {
+      .job.inline .meta .companyName {
+          font-weight: 400
+      }
+  }
+  
+  .job.inline .meta .companyName:hover {
+      border-bottom: 1px solid #333
+  }
+  
+  .job.inline .meta .jobTitle {
+      display: inline-block;
+      margin: 0;
+      color: #0000b3;
+      font-weight: 400;
+      border-bottom: 1px solid rgba(0, 0, 179, .5);
+      max-width: 43ch;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-decoration: none;
+      vertical-align: top
+  }
+  
+  @media(max-device-width:640px),
+  (max-device-width:667px),
+  (max-width:480px),
+  (max-width:768px),
+  only screen and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:2) {
+      .job.inline .meta .jobTitle {
+          display: block;
+          border: none
+      }
+  }
+  
+  .job.inline .meta .jobTitle:hover {
+      border-bottom: 1px solid rgba(0, 0, 128, .7)
+  }
+  
+  @media(max-device-width:640px),
+  (max-device-width:667px),
+  (max-width:480px),
+  (max-width:768px),
+  only screen and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:2) {
+      .job.inline .meta br {
+          display: none
+      }
+  }
+  
+  .job.inline .meta .jobLocation {
+      max-width: 30ch;
+      background: hsla(0, 0%, 60%, .1);
+      color: #999;
+      color: #333
+  }
+  
+  .job.inline .meta .applications,
+  .job.inline .meta .comments,
+  .job.inline .meta .jobLocation,
+  .job.inline .meta .label,
+  .job.inline .meta .salaryRange,
+  .job.inline .meta .views {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+      display: inline-block;
+      font-size: .6em;
+      border-radius: 3px;
+      padding: 0 .5em;
+      margin-right: .5em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1.6
+  }
+  
+  .job.inline .meta .applications,
+  .job.inline .meta .comments,
+  .job.inline .meta .label,
+  .job.inline .meta .salaryRange,
+  .job.inline .meta .views {
+      background: rgba(83, 121, 255, .1);
+      color: #5379ff;
+      letter-spacing: 0;
+      max-width: 25ch
+  }
+  
+  .job.inline .meta .salaryRange {
+      max-width: 35ch;
+      letter-spacing: auto;
+      background-color: green;
+      color: #fff
+  }
+  
+  .job.inline .createdAt {
+      margin-top: 5px;
+      vertical-align: top;
+      opacity: .5
+  }
+  
+  @media(max-device-width:640px),
+  (max-device-width:667px),
+  (max-width:480px),
+  (max-width:768px),
+  only screen and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:2) {
+      .job.inline .createdAt {
+          display: none
+      }
+  }
+  
+  .job.inline .bossPicture {
+      display: inline-block;
+      position: relative;
+      margin-right: 1em;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      border-radius: 100%;
+      background-size: cover
+  }
+  
+  @media(max-device-width:640px),
+  (max-device-width:667px),
+  (max-width:480px),
+  (max-width:768px),
+  only screen and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:2) {
+      .job.inline .bossPicture {
+          display: none
+      }
+  }

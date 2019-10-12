@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{%block title%}
+<title>{{ patientrecord.date }}</title>{%endblock%}
+
+
+{% block content %}
+{%load static%}
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="{% static 'css/appointment_list.css' %}">
+    {% for appointment in appointment_list %}
+
+
+<div class='container mt-4'>
+  <li class="job inline " title="Protocol Labs: People Ops Coordinator (HR Coordinator)">
+  <span class="companyLogo-container">
+  <img alt="Protocol Labs logo" src="https://revoltforher.files.wordpress.com/2017/11/img-20171028-wa0027.jpg?w=687" class="ui image companyLogo fadeIn" style="max-height: 150px;"></span>
+  <span class="meta"><a class="jobTitle" title="Protocol Labs: People Ops Coordinator (HR Coordinator)" href="{{ appointment.get_absolute_url }}">Appointment with Dr {{appointment}}</a> 
+  <span class="jobLocation">Cape Town</span>
+    <span class="applications" title="Last application"><i class="far fa-clock"></i> 2 Sept 2019, 12:00am</span></span>
+    
+  </li>
+</div>
+
+    {% endfor %}
+{%endblock%}
