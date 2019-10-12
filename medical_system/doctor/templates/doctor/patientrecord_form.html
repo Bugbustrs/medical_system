@@ -1,0 +1,14 @@
+{% extends "docter_base.html" %}
+
+
+{% block content %}
+<div class='mx-auto col-6 col-sm-8 col-md-6 col-lg-6'>
+<br>
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+
+    <input class='mb-3 btn btn-success' type="submit" value="Save">
+</form>
+</div>
+
+{%endblock%}

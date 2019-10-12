@@ -13,6 +13,8 @@ class PatientRecordListView(generic.ListView):
 class PatientRecordDetailView(generic.DetailView):
     model = PatientRecord
 
-class PatientRecordCreationView(CreateView):
-    model = PatientRecord
-    fields=('symptoms','diagnosis','prescription')
+class AppointmentListView(generic.ListView):
+    model = Appointment
+
+class AppointmentDetailView(generic.DetailView):
+    model = Appointment
