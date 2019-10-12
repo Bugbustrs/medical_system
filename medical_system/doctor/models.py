@@ -1,5 +1,5 @@
 from django.db import models
-from patient import Patient
+from patient.models import Patient
 
 # Create your models here.
 class Doctor(models.Model):
@@ -9,7 +9,7 @@ class Doctor(models.Model):
     second_name = models.CharField(max_length=100)
     
     location = models.CharField(max_length = 100)
-    phone_number = models.CharField(blank=False, null=False)
+    phone_number = models.CharField(max_length = 14,blank=False, null=False)
     email_address = models.CharField(max_length=100)
     
     medical_scheme = models.CharField(max_length=100)
